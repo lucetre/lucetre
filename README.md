@@ -1,5 +1,17 @@
 ### Hi there 👋
 
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="https://github.com/lucetre/lucetre/blob/main/metrics.svg" alt="Metrics" width="100%">      
+    </td>
+    <td width="50%" valign="top">
+      <img src="https://github.com/lucetre/lucetre/blob/main/achievements.svg" alt="Achievements" width="100%">      
+    </td>
+  </tr>
+</table>
+
+
 <!--
 **lucetre/lucetre** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
