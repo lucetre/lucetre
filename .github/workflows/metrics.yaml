@@ -19,7 +19,9 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Seoul
           
-      - uses: lowlighter/metrics@latest
+#         Use redlinejoes fork until lowlighter/metrics#1479 is fixed
+#       - uses: lowlighter/metrics@latest
+      - uses: redlinejoes/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: achievements.svg
