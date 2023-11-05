@@ -35,7 +35,16 @@ jobs:
           plugin_achievements_display: compact
           plugin_achievements_threshold: X
 
+      - name: Half-year calendar
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.isocalendar.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_isocalendar: yes
+
       - name: Full-year calendar
+        if: false
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.isocalendar.fullyear.svg
@@ -43,3 +52,22 @@ jobs:
           base: ""
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
+
+      - name: Detailed report
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.pagespeed.detailed.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_pagespeed: yes
+          plugin_pagespeed_detailed: yes
+          plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
+          plugin_pagespeed_url: https://lucetre.github.io
+
+      - name: Fortune
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.fortune.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_fortune: yes
