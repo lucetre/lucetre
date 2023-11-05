@@ -16,11 +16,20 @@ jobs:
       contents: write
     steps:
       - name: Default metrics
+        if: false
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.base.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories, metadata
+
+      - name: Classic metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.classic.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: header, repositories
+          plugin_lines: yes
 
       - name: Compact display
         uses: lowlighter/metrics@latest
