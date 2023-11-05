@@ -1,14 +1,14 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <img src="https://github.com/lucetre/lucetre/blob/main/metrics.svg" alt="Metrics" width="100%">      
+      <img src="https://github.com/lucetre/lucetre/blob/main/metrics.base.svg" alt="base" width="100%">
     </td>
     <td width="50%" valign="top">
-      <img src="https://github.com/lucetre/lucetre/blob/main/achievements.svg" alt="Achievements" width="100%">      
+      <img src="https://github.com/lucetre/lucetre/blob/main/metrics.plugin.achievements.compact.svg" alt="achievements" width="100%">
+      <img src="https://github.com/lucetre/lucetre/blob/main/metrics.plugin.isocalendar.fullyear.svg" alt="isocalendar" width="100%">
     </td>
   </tr>
 </table>
-
 
 <!--
 
