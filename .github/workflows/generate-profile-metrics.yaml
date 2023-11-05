@@ -54,7 +54,6 @@ jobs:
           plugin_isocalendar_duration: full-year
 
       - name: Fortune
-        if: false
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.fortune.svg
