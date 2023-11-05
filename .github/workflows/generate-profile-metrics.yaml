@@ -21,15 +21,7 @@ jobs:
         with:
           filename: metrics.base.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          base: header, activity, community, repositories, metadata
-
-      - name: Classic metrics
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.classic.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: header, repositories
-          plugin_lines: yes
+          base: header, activity, community, repositories
 
       - name: Compact display
         uses: lowlighter/metrics@latest
