@@ -1,11 +1,14 @@
 name: Generate Profile Metrics
+
 on:
-  # Schedule daily updates
   schedule: [{cron: "0 0 * * *"}]
-  # (optional) Run workflow manually
   workflow_dispatch:
-  # (optional) Run workflow when pushing on master/main
-  push: {branches: ["master", "main"]}
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/*.yaml
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
