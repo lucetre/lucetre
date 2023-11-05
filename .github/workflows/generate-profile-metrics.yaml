@@ -16,7 +16,6 @@ jobs:
       contents: write
     steps:
       - name: Default metrics
-        if: false
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.base.svg
