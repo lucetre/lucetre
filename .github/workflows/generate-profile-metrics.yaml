@@ -53,17 +53,6 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
-      - name: Detailed report
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.plugin.pagespeed.detailed.svg
-          token: NOT_NEEDED
-          base: ""
-          plugin_pagespeed: yes
-          plugin_pagespeed_detailed: yes
-          plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
-          plugin_pagespeed_url: https://lucetre.github.io
-
       - name: Fortune
         uses: lowlighter/metrics@latest
         with:
