@@ -1,4 +1,4 @@
-name: Metrics
+name: Generate Profile Metrics
 on:
   # Schedule daily updates
   schedule: [{cron: "0 0 * * *"}]
@@ -12,17 +12,18 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Default metrics
+        uses: lowlighter/metrics@latest
         with:
+          filename: metrics.base.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          filename: metrics.svg
           base: header, activity, community, repositories, metadata
-          config_timezone: Asia/Seoul
 
-      - uses: lowlighter/metrics@latest
+      - name: Compact display
+        uses: lowlighter/metrics@latest
         with:
+          filename: metrics.plugin.achievements.compact.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          filename: achievements.svg
           base: ""
           plugin_achievements: yes
           plugin_achievements_only: >-
@@ -30,3 +31,12 @@ jobs:
             scripter, packager, explorer, infographile, manager
           plugin_achievements_display: compact
           plugin_achievements_threshold: X
+
+      - name: Full-year calendar
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.isocalendar.fullyear.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
