@@ -1,3 +1,5 @@
+<!--
+
 <table>
   <tr>
     <td width="50%" valign="top">
@@ -10,8 +12,6 @@
     </td>
   </tr>
 </table>
-
-<!--
 
 ### Hi there 👋
 
